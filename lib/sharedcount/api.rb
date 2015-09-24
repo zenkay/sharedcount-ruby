@@ -17,7 +17,8 @@ module Sharedcount
 
 		def fetch(url)
       response = self.connection.get "/?apikey=#{self.apikey}&url=#{url}"
-      return JSON.parse(response.body)
+      raw_data = JSON.parse(response.body)
+      return Sharedcount::Data.new(raw_data)
 		end
 
 	end

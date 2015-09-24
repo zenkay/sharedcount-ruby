@@ -1,3 +1,4 @@
+require "sharedcount/data"
 require "sharedcount/api"
 require "sharedcount/version"
 

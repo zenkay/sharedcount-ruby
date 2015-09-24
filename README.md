@@ -33,9 +33,27 @@ end
 api = Sharedcount::API.new
 response = api.fetch("http://www.example.com/some-page.html")
 
+# Raw response from SharedCount
 result.raw_data
-=> {"StumbleUpon"=>0, "Reddit"=>0, "Facebook"=>{"commentsbox_count"=>0, "click_count"=>0, "total_count"=>35, "comment_count"=>4, "like_count"=>6, "share_count"=>25}, "Delicious"=>0, "GooglePlusOne"=>7, "Buzz"=>0, "Twitter"=>0, "Diggs"=>0, "Pinterest"=>0, "LinkedIn"=>0}
+=> {
+	"StumbleUpon"=>0, 
+	"Reddit"=>0, 
+	"Facebook"=>{
+		"commentsbox_count"=>0, 
+		"click_count"=>0, 
+		"total_count"=>35, 
+		"comment_count"=>4, 
+		"like_count"=>6, 
+		"share_count"=>25}, 
+	"Delicious"=>0, 
+	"GooglePlusOne"=>7, 
+	"Buzz"=>0, 
+	"Twitter"=>0, 
+	"Diggs"=>0, 
+	"Pinterest"=>0, 
+	"LinkedIn"=>0}
 
+# Sum of all social actions
 result.total_actions
 => 42
 

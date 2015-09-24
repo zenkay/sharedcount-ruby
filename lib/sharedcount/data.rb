@@ -7,8 +7,6 @@ module Sharedcount
 			:twitter_shares, :pinterest_shares, :digg_shares, :linkedin_shares, 
 			:total_actions, :raw_data
 
-{"StumbleUpon"=>0, "Reddit"=>0, "Facebook"=>{"commentsbox_count"=>0, "click_count"=>0, "total_count"=>35, "comment_count"=>4, "like_count"=>6, "share_count"=>25}, "Delicious"=>0, "GooglePlusOne"=>7, "Buzz"=>0, "Twitter"=>0, "Diggs"=>0, "Pinterest"=>0, "LinkedIn"=>0}
-
 		def initialize(data)
 
 			self.raw_data = data

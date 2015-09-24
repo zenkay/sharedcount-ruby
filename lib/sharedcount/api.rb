@@ -1,3 +1,6 @@
+require "faraday"
+require "json"
+
 module Sharedcount
 	class API
 
@@ -16,8 +19,6 @@ module Sharedcount
       response = conn.get "/?apikey=#{APIKEYS.sample}&url=#{url}"
       return JSON.parse(response.body)
 		end
-
-
 
 	end
 end

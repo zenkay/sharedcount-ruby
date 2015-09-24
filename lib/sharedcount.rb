@@ -1,4 +1,4 @@
-require "sharedcount/request"
+require "sharedcount/api"
 require "sharedcount/version"
 
 module Sharedcount

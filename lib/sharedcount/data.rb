@@ -7,9 +7,10 @@ module Sharedcount
 			:twitter_shares, :pinterest_shares, :digg_shares, :linkedin_shares, 
 			:total_actions, :raw_data
 
-		def initialize(data)
+		def initialize(json_data)
 
-			self.raw_data = data
+			self.raw_data = json_data
+      data = JSON.parse(json_data)
 
 			self.stumble_upon_shares = (data["StumbleUpon"] || nil)
 			self.reddit_shares = (data["Reddit"] || nil)

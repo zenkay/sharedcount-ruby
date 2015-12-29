@@ -1,6 +1,13 @@
 require 'spec_helper'
 
-describe Sharedcount do
+vcr_options = { 
+  cassette_name: "sharedcount", 
+  record: :new_episodes, 
+  match_requests_on: [:method, :uri, :body]
+}
+
+describe Sharedcount, vcr: vcr_options do
+
   it 'has a version number' do
     expect(Sharedcount::VERSION).not_to be nil
   end

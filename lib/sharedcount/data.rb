@@ -4,7 +4,7 @@ module Sharedcount
 		attr_accessor :stumble_upon_shares, :reddit_shares, :facebook_commentsbox,
 			:facebook_clicks, :facebook_total, :facebook_comments, :facebook_likes,
 			:facebook_shares, :delicious_shares, :google_plus_one, :google_buzzs,
-			:twitter_shares, :pinterest_shares, :digg_shares, :linkedin_shares, 
+			:twitter_shares, :pinterest_shares, :digg_shares, :linkedin_shares,
 			:total_actions, :json_data, :raw_data
 
 		def initialize(json_data)
@@ -28,7 +28,7 @@ module Sharedcount
 			self.facebook_likes = (self.raw_data["Facebook"]["like_count"] || nil)
 			self.facebook_shares = (self.raw_data["Facebook"]["share_count"] || nil)
 
-			self.total_actions = self.stumble_upon_shares + self.reddit_shares + self.delicious_shares + self.google_plus_one + self.google_buzzs + self.twitter_shares + self.digg_shares + self.pinterest_shares + self.linkedin_shares + self.facebook_total
+			self.total_actions = self.stumble_upon_shares.to_i + self.reddit_shares.to_i + self.delicious_shares.to_i + self.google_plus_one.to_i + self.google_buzzs.to_i + self.twitter_shares.to_i + self.digg_shares.to_i + self.pinterest_shares.to_i + self.linkedin_shares.to_i + self.facebook_total.to_i
 
 		end
 
